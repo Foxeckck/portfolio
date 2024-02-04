@@ -16,7 +16,7 @@
         </div>
     </div>
 </template>
-<style scoped>
+<style scoped lang="scss">
 
 .nav {
     display: flex;
@@ -27,6 +27,7 @@
     padding: 0 5px;
     background: rgb(147, 142, 142);
     background: radial-gradient(circle, rgba(147, 142, 142, 1) 0%, rgba(87, 79, 79, 1) 58%, rgba(91, 84, 84, 1) 100%);
+    
 }
 
 .links {
@@ -81,6 +82,10 @@
     padding: 15px 35px 15px 40px;
     margin-left: -40px;
     background: rgb(167, 163, 163);
+    @media (max-width: 500px){
+        display: none;
+    }
 }
+
 </style>
 <script></script>

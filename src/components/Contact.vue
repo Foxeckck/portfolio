@@ -12,7 +12,8 @@
             </ul>
             <form class="form" @submit.prevent="sendMessage">
                 <h3>Обращяйтесь ко мне</h3>
-                <textarea v-model="message" id="message"></textarea>
+                <input type="text" v-model="telegramm" placeholder="Введите свой тeлеграмм ник, пример '@name'">
+                <textarea v-model="message" placeholder="Напишите вопрос..." id="message"></textarea>
                 <button type="submit">Отправить</button>
             </form>
         </div>
@@ -23,7 +24,8 @@
 export default {
     data() {
         return {
-            message: "id",
+            telegramm: "",
+            message: "",
         };
     },
     methods: {
@@ -31,36 +33,42 @@ export default {
             const chatId = "5084794202"; // Замените на свой chat_id
             const url = "https://api.telegram.org/bot6449439101:AAHgmB9NycU_eziy4NpuI0wsMmNH6uUyvnM/sendMessage"
 
-            if(this.message){
-// Формируем тело запроса
-const formData = new FormData();
-            formData.append("chat_id", chatId);
-            formData.append("text", this.message);
+            const regex = /^@[a-zA-Z0-9_]+$/;
+            if (!regex.test(this.telegramm)) {
+                alert("Введите телеграмм ник")
+                return
+            }
 
-            // Отправляем POST запрос к API Telegram Bot
-            fetch(url, {
-                method: "POST",
-                body: formData,
-            })
-                .then(response => response.json())
-                .then(data => {
-                    console.log("Ответ от Telegram API:", data);
-                    // Обработка ответа, если необходимо
+            if (this.message) {
+                // Формируем тело запроса
+                const formData = new FormData();
+                formData.append("chat_id", chatId);
+                formData.append("text", this.telegramm + ": " + this.message);
+
+                // Отправляем POST запрос к API Telegram Bot
+                fetch(url, {
+                    method: "POST",
+                    body: formData,
                 })
-                .catch(error => {
-                    console.error("Ошибка при отправке сообщения:", error);
-                    // Обработка ошибки, если необходимо
-                });
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log("Ответ от Telegram API:", data);
+                        // Обработка ответа, если необходимо
+                    })
+                    .catch(error => {
+                        console.error("Ошибка при отправке сообщения:", error);
+                        // Обработка ошибки, если необходимо
+                    });
                 this.message = ""
             }
 
-                
+
         },
     },
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .skills {
     border: 2px solid black;
     border-radius: 20px;
@@ -111,6 +119,11 @@ const formData = new FormData();
 .grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
+
+    @media (max-width: 510px) {
+        grid-template-columns: 1fr;
+        padding-bottom: 20px;
+    }
 }
 
 .form {
@@ -119,11 +132,24 @@ const formData = new FormData();
     justify-content: center;
     align-items: center;
     border-left: 2px solid black;
+
+    @media (max-width: 510px) {
+        border-left: none;
+        order: -1;
+    }
 }
 
 .form textarea {
     width: 80%;
     height: 120px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.form input {
+    width: 80%;
     background-color: rgb(255, 255, 255);
     border: 2px solid black;
     padding: 10px;

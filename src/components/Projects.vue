@@ -17,7 +17,7 @@
     </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .links img {
     border: 2px solid black;
     width: 100%;
@@ -46,7 +46,11 @@
     gap: 50px;
     text-align: center;
     padding: 20px 10px;
-
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin: 10px;
+    }
 
 }
 

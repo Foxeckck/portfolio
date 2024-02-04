@@ -1,25 +1,28 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 body {
-    margin: 0;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    overflow-x: hidden;
-    background-color: rgb(146, 153, 156);
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  overflow-x: hidden;
+  background-color: rgb(146, 153, 156);
 }
-.container{
-    overflow: hidden;
-    padding: 0 10px;
+
+.container {
+  overflow: hidden;
+  padding: 0 10px;
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: #555252; /* Цвет трека (фона) */
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #000000;
-    border-radius: 30px; /* Цвет ползунка */
-  }
-  
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #555252;
+  /* Цвет трека (фона) */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 30px;
+  /* Цвет ползунка */
+}

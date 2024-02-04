@@ -12,14 +12,23 @@
         </div>
     </div>
 </template>
-<style scoped>
+<style scoped lang="scss"> 
 .links {
     margin: 30px;
+    @media (max-width: 550px){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
 }
 
 .header {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    @media (max-width: 550px){
+        grid-template-columns: 1fr;
+    }
 }
 .name{
     margin: 0;
@@ -34,6 +43,9 @@
     border-radius: 50%;
     background: rgb(51,49,49);
 background: radial-gradient(circle, rgba(51,49,49,1) 0%, rgba(121,119,119,1) 58%, rgba(182,182,182,1) 100%);
+@media (max-width: 550px){
+        max-width: 200px;
+    }
 }
 .rehts{
     display: flex;
