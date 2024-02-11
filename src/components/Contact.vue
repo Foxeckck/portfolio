@@ -181,7 +181,7 @@ export default {
 }
 
 .info a{
-    color: var(--color-font);;
+    color: var(--color-font);
 }
 
 .info li {
