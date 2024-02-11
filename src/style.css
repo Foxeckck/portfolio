@@ -4,7 +4,17 @@ body {
   margin: 0;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   overflow-x: hidden;
-  background-color: rgb(146, 153, 156);
+  background-color: var(--color-background);
+}
+
+:root[data-theme="light"] {
+  --color-background: #f1f2f7;
+  --color-font: #2D2E32;
+}
+
+:root[data-theme="dark"] {
+  --color-background: #121318;
+  --color-font: #ededed;
 }
 
 .container {
@@ -25,4 +35,8 @@ body {
   background-color: #000000;
   border-radius: 30px;
   /* Цвет ползунка */
+}
+
+a {
+  text-decoration: none;
 }

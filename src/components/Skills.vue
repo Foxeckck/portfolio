@@ -58,9 +58,10 @@
 
 <style scoped>
 .skills {
-    border: 2px solid black;
+    border: 2px solid var(--color-font);
     border-radius: 20px;
     margin-top: 50px;
+    color: var(--color-font);
 }
 
 .header {
@@ -68,7 +69,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--color-font);
 }
 
 .item img {

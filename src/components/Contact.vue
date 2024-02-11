@@ -5,10 +5,10 @@
         </div>
         <div class="grid">
             <ul class="info">
-                <li><a href="">Дискорд</a></li>
-                <li><a href="">Телеграмм</a></li>
-                <li><a href="">vufka33@gmail.com</a></li>
-                <li><a href="">+49151520495185</a></li>
+                <li><a href="https://discordapp.com/users/foxeckck#8670">Дискорд</a></li>
+                <li><a href="https://t.me/Fufkaxs">Телеграмм</a></li>
+                <li><a href="mailto:vufka33@gmail.com">vufka33@gmail.com</a></li>
+                <li><a href="tel:+49151520495185">+49151520495185</a></li>
             </ul>
             <form class="form" @submit.prevent="sendMessage">
                 <h3>Обращяйтесь ко мне</h3>

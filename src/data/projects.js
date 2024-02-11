@@ -23,6 +23,20 @@ const projects = [
         beshreibung: "Сайт был зделан на заказ, описание сервера майнкрафт",
         link: "https://d1mpleof4sitycenter.netlify.app/",
         imge: imge3
+    },
+    {
+        id: 4,
+        title: "Сайт по серверу майнкрафт",
+        beshreibung: "Сайт был зделан на заказ, описание сервера майнкрафт",
+        link: "https://d1mpleof4sitycenter.netlify.app/",
+        imge: imge3
+    },
+    {
+        id: 5,
+        title: "Сайт по серверу майнкрафт",
+        beshreibung: "Сайт был зделан на заказ, описание сервера майнкрафт",
+        link: "https://d1mpleof4sitycenter.netlify.app/",
+        imge: imge3
     }
 ]
 export { projects }

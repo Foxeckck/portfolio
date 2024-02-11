@@ -7,11 +7,12 @@
         <div class="project" v-for="project in projectsData">
             <a class="links" :href="project.link">
                 <img class="imge" :src="project.imge" alt="">
+                <div class="back_img"><i class="bi bi-eye"></i></div>
             </a>
             <div class="rehts">
                 <h3 class="header">{{ project.title }}</h3>
                 <p>{{ project.beshreibung }}</p>
-                <a :href="project.link">Перейти</a>
+                <a class="btn" :href="project.link">Перейти</a>
             </div>
         </div>
     </div>
@@ -19,11 +20,37 @@
 
 <style scoped lang="scss">
 .links img {
-    border: 2px solid black;
     width: 100%;
-    border-radius: 20px;
     object-fit: contain;
     object-position: center;
+}
+
+.links {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.back_img {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.493);
+    opacity: 0;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back_img i {
+    font-size: 80px;
+    color: whitesmoke;
+
+}
+
+.back_img:hover {
+    opacity: 1;
 }
 
 .header {
@@ -32,6 +59,19 @@
     align-items: center;
     justify-content: center;
     border-bottom: 2px solid black;
+}
+
+.btn {
+    border: 2px solid black;
+    color: black;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    transition: 0.5s ease-out;
+}
+
+.btn:hover {
+    padding: 5px 30px;
 }
 
 .projects {
@@ -46,6 +86,7 @@
     gap: 50px;
     text-align: center;
     padding: 20px 10px;
+
     @media (max-width: 600px) {
         grid-template-columns: 1fr;
         gap: 0;
@@ -70,14 +111,6 @@
 .rehts p {
     padding: 5px;
     max-width: 300px;
-}
-
-.rehts a {
-    border: 2px solid black;
-    color: black;
-    padding: 5px 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
 }
 </style>
 
