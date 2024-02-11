@@ -13,6 +13,13 @@
     </div>
 </template>
 <style scoped lang="scss"> 
+
+.name{
+    color: var(--color-font);
+}
+.disc{
+    color: var(--color-font);
+}
 .links {
     margin: 30px;
     @media (max-width: 550px){

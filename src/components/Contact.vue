@@ -70,10 +70,11 @@ export default {
 
 <style scoped lang="scss">
 .skills {
-    border: 2px solid black;
+    border: 2px solid var(--color-font);
     border-radius: 20px;
     margin-top: 50px;
     margin-bottom: 50px;
+    color: var(--color-font);
 }
 
 .header {
@@ -81,7 +82,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--color-font);
 }
 
 .item img {
@@ -131,7 +132,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-left: 2px solid black;
+    border-left: 2px solid var(--color-font);
 
     @media (max-width: 510px) {
         border-left: none;
@@ -157,8 +158,8 @@ export default {
 }
 
 .form button {
-    border: 2px solid black;
-    color: black;
+    border: 2px solid var(--color-font);
+    color: var(--color-font);
     padding: 5px 10px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -175,13 +176,18 @@ export default {
     gap: 15px;
     padding: 0;
     margin: 0 10px;
+    color: var(--color-font);
 
+}
+
+.info a{
+    color: var(--color-font);;
 }
 
 .info li {
     list-style: none;
     text-align: center;
-    border: 2px solid black;
+    border: 2px solid var(--color-font);
     border-radius: 20px;
     padding: 10px 25px;
     width: 100%;

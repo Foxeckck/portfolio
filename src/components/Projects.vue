@@ -28,7 +28,7 @@
 .links {
     position: relative;
     overflow: hidden;
-    border: 2px solid black;
+    border: 2px solid var(--color-font);
     border-radius: 20px;
 }
 
@@ -58,12 +58,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--color-font);
 }
 
 .btn {
-    border: 2px solid black;
-    color: black;
+    border: 2px solid var(--color-font);
+    color: var(--color-font);
     padding: 5px 10px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -75,9 +75,10 @@
 }
 
 .projects {
-    border: 2px solid black;
+    border: 2px solid var(--color-font);
     border-radius: 20px;
     margin-top: 100px;
+    color: var(--color-font);
 }
 
 .project {
@@ -96,7 +97,7 @@
 }
 
 .rehts {
-    border: 2px solid black;
+    border: 2px solid var(--color-font);
     display: flex;
     flex-direction: column;
     align-items: center;

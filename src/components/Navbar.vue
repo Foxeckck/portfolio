@@ -69,11 +69,21 @@ function changeTheme() {
 
 }
 
+.bi-telegram{
+    color: rgb(67, 67, 248);
+}
+.bi-discord{
+    color: rgb(97, 13, 175);
+}
+.bi-telephone-fill{
+    color:rgb(49, 49, 209)
+}
+
 .bi-moon-stars-fill {
     color: white;
 }
 .bi-brightness-high-fill{
-    color: yellow;
+    color: rgb(253, 253, 17);
 }
 
 .links {
