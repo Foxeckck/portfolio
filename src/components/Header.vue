@@ -46,7 +46,7 @@
 }
 
 .avatarka {
-    border: 2px solid black;
+    border: 2px solid var(--color-font);;
     border-radius: 50%;
     background: rgb(51,49,49);
 background: radial-gradient(circle, rgba(51,49,49,1) 0%, rgba(121,119,119,1) 58%, rgba(182,182,182,1) 100%);
